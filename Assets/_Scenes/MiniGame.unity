@@ -1150,31 +1150,31 @@ Prefab:
     m_Modifications:
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.54
+      value: 6.53999996
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.63
+      value: -.426479191
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.36
+      value: -1.36000001
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0.4619398
+      value: .461939812
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0.19134171
+      value: .191341713
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0.19134171
+      value: .191341713
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0.8446232
+      value: .844623208
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_RootOrder
@@ -1182,15 +1182,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.49999988
+      value: .499999881
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.50000036
+      value: .500000358
       objectReference: {fileID: 0}
     - target: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.49999994
+      value: .49999994
       objectReference: {fileID: 0}
     - target: {fileID: 141642, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}
       propertyPath: m_Name
@@ -1332,7 +1332,7 @@ GameObject:
   - 114: {fileID: 1536092551}
   - 114: {fileID: 1536092550}
   - 114: {fileID: 1536092549}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1494,6 +1494,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   countText: {fileID: 1590960958}
+  winText: {fileID: 2052756092}
 --- !u!135 &1766311179
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1761,7 +1762,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 75}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2052756092

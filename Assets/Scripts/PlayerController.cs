@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour {
 
 	public float speed;
 	public Text countText;
+	public Text winText;
 
 	private Rigidbody rb;
 	private int count;
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour {
 		rb = GetComponent<Rigidbody> ();
 		count = 0;
 		SetScoreText();
+		winText.text = "";
 	}
 
 	void FixedUpdate() {
@@ -34,5 +36,8 @@ public class PlayerController : MonoBehaviour {
 
 	void SetScoreText() {
 		countText.text = "Score: " + count.ToString();
+		if (count >= 12) {
+			winText.text = "You Win!!!";
+		}
 	}
 }
