@@ -379,7 +379,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 0
 --- !u!114 &419974572
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1311,8 +1311,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1302373628}
-  m_LocalRotation: {x: .550265133, y: -.264139503, z: .63098985, w: .478842944}
-  m_LocalPosition: {x: 1.26100004, y: 2.43600011, z: .661000013}
+  m_LocalRotation: {x: .383505076, y: -.417922646, z: .809230328, w: -.153006047}
+  m_LocalPosition: {x: -38.7999992, y: 13.1000004, z: 36.2999992}
   m_LocalScale: {x: 1, y: .753935635, z: 2.47946239}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1332,7 +1332,7 @@ GameObject:
   - 114: {fileID: 1536092551}
   - 114: {fileID: 1536092550}
   - 114: {fileID: 1536092549}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1790,7 +1790,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Win Text
+  m_Text: 
 --- !u!222 &2052756093
 CanvasRenderer:
   m_ObjectHideFlags: 0
