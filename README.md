@@ -54,16 +54,16 @@ http://blogs.unity3d.com/2015/08/26/unity-comes-to-linux-experimental-build-now-
 
 Download the .deb file.
 
-In CLI:
-cd to the dir where you downloaded the file.
+After downloading, in the CLI:
+`cd` to the dir where you downloaded the file, then run this.
 
 ```bash
-sudo dpkg -i unity-editor-[version-number].deb
+$ sudo dpkg -i unity-editor-[version-number].deb
 ```
 
 example:
 ```bash
-sudo dpkg -i unity-editor-5.1.0f3+2015082501_amd64.deb
+$ sudo dpkg -i unity-editor-5.1.0f3+2015082501_amd64.deb
 ```
 
 It will give you error messages of dependencies that need to be installed:
@@ -134,7 +134,7 @@ So the first thing you need to do is install libav-tools (if you use this, no ne
 After installing libav-tools, re-do:
 
 ```bash
-sudo dpkg -i unity-editor-5.1.0f3+2015082501_amd64.deb
+$ sudo dpkg -i unity-editor-5.1.0f3+2015082501_amd64.deb
 (Reading database ... 219384 files and directories currently installed.)
 Preparing to unpack unity-editor-5.1.0f3+2015082501_amd64.deb ...
 Unpacking unity-editor (5.1.0f3) over (5.1.0f3) ...
@@ -161,13 +161,62 @@ Unity3D should install correctly now! ^__^
 
 ### Things That I Wish I Knew When I Started In Terms Of Version Control (that are not included in the tutorials).
 
-Like any good developer, I like to use version control.  Plus, I work on my laptop when I'm not at home (where; and I work on my desktop when I'm at home (which I prefer to use because my desktop is more powerful).
+Like any good developer, I like to use version control.  Plus, I work on my laptop when I'm not at home (I spend most of my time not-at home); and I work on my desktop when I'm at home (which I prefer to use because my desktop is more powerful).
 
-Unity's website has amazing tutorials <http://unity3d.com/learn/tutorials/topics/interface-essentials> for beginners, but unfortunately if you want to look for anything about version control, you'd have to hunt for it.
+Unity's website has amazing tutorials <http://unity3d.com/learn/tutorials/topics/interface-essentials> for beginners, but unfortunately if you want to look for anything about version control, you'd have to hunt for it. So here's everything all in one place -- all the problems that I encountered, so that you won't repeat the same mistakes as me!!!!!! &gt;______&lt;
 
 These are the things I wish I knew, because I could have avoided a lot of delays and headaches had I known these before:
 
+#### Setting Up For Version Control:
 
+
+##### The problem:
+I started creating this project on my desktop, and put everything in GitHub so I could work on it on my laptop when I was away from home.  On my laptop, I made a lot of changes, then I pushed my changes to GitHub.  Back on my desktop, I pulled the changes to my local repo, and when I tried to turn on Unity and selected this project, Unity would just crash.
+
+##### How to avoid this:
+
+a. When you start your project, change these settings in Unity:
+
+b. Put these in your .gitignore
+
+```
+# =============== #
+# Unity generated #
+# =============== #
+Temp/
+Obj/
+UnityGenerated/
+Library/
+Assets/AssetStoreTools*
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+```
+
+#### Working With Large Files:
+Projects like these would create large files, especially the "Builds" of your game (as mentioned here: <http://unity3d.com/learn/tutorials/projects/roll-ball-tutorial/building-game?playlist=17141>).
+
+##### The problem:
+##### How to avoid this:
+There are several things that you can do
+
+
+### To-Do:
+1. Add testing.
+2. Add instructions on how to do testing using:
+ - https://unity3d.com/learn/tutorials/topics/production/unity-test-tools
+ - http://strangeioc.github.io/strangeioc/
 
 ## License
 
