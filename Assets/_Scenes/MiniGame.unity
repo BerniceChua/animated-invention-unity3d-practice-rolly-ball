@@ -545,7 +545,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Play
+  m_Text: Start!!!
 --- !u!222 &430087018
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1610,7 +1610,7 @@ GameObject:
   - 114: {fileID: 1078945486}
   - 114: {fileID: 1078945485}
   m_Layer: 0
-  m_Name: MainMenuGameObjectContainer
+  m_Name: ReplayGameObjectContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1640,6 +1640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   replay: {fileID: 1958218435}
+  mainMenuGameObjectContainer: {fileID: 0}
 --- !u!4 &1078945487
 Transform:
   m_ObjectHideFlags: 0
@@ -2609,9 +2610,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1958218432}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f400bf367d8e4742a6c9e9cb4995786, type: 3}
+  m_Script: {fileID: 11500000, guid: aaa68227d6b1943579a9a2581b0c00ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  replay: {fileID: 1958218435}
+  mainMenuGameObjectContainer: {fileID: 0}
 --- !u!114 &1958218435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2651,8 +2654,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1541649863}
-        m_MethodName: 
+      - m_Target: {fileID: 1958218434}
+        m_MethodName: Restart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
