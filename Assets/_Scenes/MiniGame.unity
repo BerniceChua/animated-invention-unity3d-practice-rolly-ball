@@ -749,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c417515836a04c93981f09e5358dec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exit: {fileID: 0}
+  exit: {fileID: 520908821}
 --- !u!4 &545314456 stripped
 Transform:
   m_PrefabParentObject: {fileID: 439782, guid: f811bcbfcdc8ba442a577c77b2b1cab9, type: 2}

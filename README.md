@@ -14,6 +14,13 @@ This README also contains:
 1. things that I wish I knew when I started in terms of version control (that are not in the tutorials).
 2. how to download and install Unity3D natively on Ubuntu (without using WinE)!!
 
+## Download The Demo!!!!! ^__^
+They are in .zip file.  Please unzip them to enjoy the game:
+
+- [Linux Build](https://s3-us-west-1.amazonaws.com/rolly-ball-game/Builds/Linux_Build_v1.1.zip)
+- [Windows Build](https://s3-us-west-1.amazonaws.com/rolly-ball-game/Builds/Windows_Build_v1.1.zip)
+- [Mac Build](https://s3-us-west-1.amazonaws.com/rolly-ball-game/Builds/Mac_Build_v1.1.zip)
+
 ## How did the name of this project come about?
 
 I was starting a GitHub repo for this Unity3D project, and GitHub recommended the name.  It seems fitting, so I just stuck with it.
@@ -43,7 +50,7 @@ I welcome any pull requestions people might have.
 
 ## Feedback
 
-(coming soon!)
+I welcome any and all the feedbacks! ^_^  You can use the above links to contact me.
 
 ## Issues
 ### How To Download & Install Unity3D Natively On Ubuntu (without WinE)!!
@@ -204,12 +211,44 @@ ExportedObj/
 *.booproj
 ```
 
-#### Working With Large Files:
-Projects like these would create large files, especially the "Builds" of your game (as mentioned here: <http://unity3d.com/learn/tutorials/projects/roll-ball-tutorial/building-game?playlist=17141>).
+#### Working With Large Files And Version Control:
+Projects like these would create large files, especially the "Builds" of your game (as mentioned here: <http://unity4d.com/learn/tutorials/projects/roll-ball-tutorial/building-game?playlist=17141>).  When you create a large file, for all that is good and holy, do NOT -- I repeat -- DO NOT do `git add` and `git commit` UNTIL you have done the proper precautions.  You will have problems pushing your code to GitHub.  For example, if you've created a large file that's bigger than 100 Mb, then you've `git add`-ed & `git commit`-ed, then make changes like do the precautions for large files in git, then did `git add` & `git commit` a second time, you will still have problems pushing to GitHub.  This is because the large files are already there in your older `commit` history.
 
 ##### The problem:
+You will not be able to push these large files into GitHub because there is a filesize limit:
+
+You will get this error message:
+
+```
+remote: error: GH001: Large files detected.
+remote: error: File player_win_x64.pdb is 110.1 MB; this exceeds GitHub's file size limit of 100.00 MB
+To https://github.com/BerniceChua/animated-invention-unity3d-pr.git
+ ! [remote rejected] feature/branch -> feature/branch (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/BerniceChua/animated-invention-unity3d-practice-rolly-ball.git'
+```
 ##### How to avoid this:
-There are several things that you can do
+There are 2 options:
+
+For either option to work, when you have generated a large file, you MUST do these BEFORE doing `git add` & `git commit`.
+
+1. Add the `Builds/` directory, and any file that's a `.pdb` into your `.gitignore` file. (`.pdb` files are the main culprits, but you cannot delete them because they are necessary for the Windows builds of the game to run.)
+ - Then after this, I put each build that I make into a .zip file, and upload them in my hosting service.
+OR:
+2. Use Git Large File Storage: https://git-lfs.github.com/
+#### Again, I cannot emphasize enough how important it is to do these 2 precautions first for large files FIRST before doing ANY `git add` & `git commit`.  Basically, if you see that error message above, see the solution below to fix it:
+##### The problem:
+You've already did several `git add`s & `git commit`s BEFORE doing the precautions for large files.
+##### How to fix this:
+Step 1: `$ git log` to see which commit was done BEFORE your large file was commited to git.
+
+Step 2: copy the salted hash (that random string of characters) of the commit.  (Example: `commit e855f68b52cf5ec901dd22c976d651502565632e`, copy "e855f68b52cf5ec901dd22c976d651502565632e")
+- If you cannot remember which one is the commit that you made with the large files, do `git log -p -#`, wherein -p gives the contents of each commit, and -# limits how many commits backwards that you need to go.  Example, if you want to see only up to 5 commits ago, use `git log -p -5`.
+
+Step 3: in your CLI - `git reset [salted hash]` (Example: `git reset e855f68b52cf5ec901dd22c976d651502565632e`)
+
+Step 4: do your precautions (either put `Builds\` or `.pdb` files into your .gitignore, or follow the instructions in https://git-lfs.github.com).
+
+Step 5: do your git add, git commit, and you should now be able to push into your remote repo without any problems now! ^_^
 
 
 ### To-Do:
