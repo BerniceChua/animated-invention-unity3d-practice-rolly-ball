@@ -212,7 +212,9 @@ ExportedObj/
 ```
 
 #### Working With Large Files And Version Control:
-Projects like these would create large files, especially the "Builds" of your game (as mentioned here: <http://unity4d.com/learn/tutorials/projects/roll-ball-tutorial/building-game?playlist=17141>).  When you create a large file, for all that is good and holy, do NOT -- I repeat -- DO NOT do `git add` and `git commit` UNTIL you have done the proper precautions.  You will have problems pushing your code to GitHub.  For example, if you've created a large file that's bigger than 100 Mb, then you've `git add`-ed & `git commit`-ed, then make changes like do the precautions for large files in git, then did `git add` & `git commit` a second time, you will still have problems pushing to GitHub.  This is because the large files are already there in your older `commit` history.
+Projects like these would create large files, especially the "Builds" of your game (as mentioned here: <http://unity4d.com/learn/tutorials/projects/roll-ball-tutorial/building-game?playlist=17141>).  
+
+When you create a large file, for all that is good and holy, do NOT -- I repeat -- DO NOT do `git add` and `git commit` UNTIL you have done the proper precautions.  You will have problems pushing your code to GitHub.  For example, if you've created a large file that's bigger than 100 Mb, then you've `git add`-ed & `git commit`-ed, then make changes like do the precautions for large files in git, then did `git add` & `git commit` a second time, you will still have problems pushing to GitHub.  This is because the large files are already there in your older `commit` history.
 
 ##### The problem:
 You will not be able to push these large files into GitHub because there is a filesize limit:
@@ -235,9 +237,12 @@ For either option to work, when you have generated a large file, you MUST do the
  - Then after this, I put each build that I make into a .zip file, and upload them in my hosting service.
 OR:
 2. Use Git Large File Storage: https://git-lfs.github.com/
+
 #### Again, I cannot emphasize enough how important it is to do these 2 precautions first for large files FIRST before doing ANY `git add` & `git commit`.  Basically, if you see that error message above, see the solution below to fix it:
+
 ##### The problem:
 You've already did several `git add`s & `git commit`s BEFORE doing the precautions for large files.
+
 ##### How to fix this:
 Step 1: `$ git log` to see which commit was done BEFORE your large file was commited to git.
 
