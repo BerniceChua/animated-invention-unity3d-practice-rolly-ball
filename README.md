@@ -45,7 +45,7 @@ I was starting a GitHub repo for this Unity3D project, and GitHub recommended th
 
 ## Contributing
 
-I welcome any pull requestions people might have.
+I welcome any pull requests people might have.
 
 
 ## Feedback
