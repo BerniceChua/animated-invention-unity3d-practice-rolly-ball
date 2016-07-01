@@ -242,6 +242,7 @@ You've already did several `git add`s & `git commit`s BEFORE doing the precautio
 Step 1: `$ git log` to see which commit was done BEFORE your large file was commited to git.
 
 Step 2: copy the salted hash (that random string of characters) of the commit.  (Example: `commit e855f68b52cf5ec901dd22c976d651502565632e`, copy "e855f68b52cf5ec901dd22c976d651502565632e")
+- If you cannot remember which one is the commit that you made with the large files, do `git log -p -#`, wherein -p gives the contents of each commit, and -# limits how many commits backwards that you need to go.  Example, if you want to see only up to 5 commits ago, use `git log -p -5`.
 
 Step 3: in your CLI - `git reset [salted hash]` (Example: `git reset e855f68b52cf5ec901dd22c976d651502565632e`)
 
