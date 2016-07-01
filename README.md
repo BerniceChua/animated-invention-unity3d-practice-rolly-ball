@@ -18,7 +18,9 @@ This README also contains:
 They are in .zip file.  Please unzip them to enjoy the game:
 
 - [Linux Build](https://s3-us-west-1.amazonaws.com/rolly-ball-game/Builds/Linux_Build_v1.1.zip)
+ - Once unzipped, please click on the file named 'RollyBall(Linux).x86_64' to play the game.
 - [Windows Build](https://s3-us-west-1.amazonaws.com/rolly-ball-game/Builds/Windows_Build_v1.1.zip)
+ - Once unzipped, please click on the file named 'RollyBall(Windows).exe' to play the game.
 - [Mac Build](https://s3-us-west-1.amazonaws.com/rolly-ball-game/Builds/Mac_Build_v1.1.zip)
 
 ## How did the name of this project come about?
@@ -184,6 +186,16 @@ I started creating this project on my desktop, and put everything in GitHub so I
 
 a. When you start your project, change these settings in Unity:
 
+(This guide assumes version 5 & higher:)
+
+- Edit > Project Settings > Editor
+ - Enable "Visible Meta files"
+- Edit > Project Settings > Editor
+ - Version Control > Mode should be "Visible Meta Files"
+ - Asset Serialization > Mode should be "Force Text"
+
+Save your "scene", and exit Unity.  In your project's root directory, please delete `Library/` & `Temp\`.
+
 b. Put these in your .gitignore
 
 ```
@@ -210,6 +222,8 @@ ExportedObj/
 *.unityproj
 *.booproj
 ```
+
+After completing both, you should now be able to safely push to your external repo.
 
 #### Working With Large Files And Version Control:
 Projects like these would create large files, especially the "Builds" of your game (as mentioned here: <http://unity4d.com/learn/tutorials/projects/roll-ball-tutorial/building-game?playlist=17141>).  
